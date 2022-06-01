@@ -120,8 +120,8 @@ start = datetime.datetime(2019, 3, 1)
 end = date.today()
 
 com = pdr.DataReader(['GC=F', 'SI=F', 'PL=F', 'HG=F', 'PA=F', 'CL=F', 'HO=F',
-                      'NG=F', 'RB=F', 'ZC=F', 'SB=F', 'ZO=F', 'ZR=F', 'ZS=F',
-                      'LE=F', 'HE=F', 'CC=F', 'KC=F', 'CT=F', 'LBS=F'],
+                      'NG=F', 'RB=F', 'ZC=F', 'SB=F', 'ZO=F', 'ZS=F', 'LE=F',
+                      'HE=F', 'CC=F', 'KC=F', 'CT=F', 'LBS=F'],
                      'yahoo', start, end)['Adj Close']
 
 com = com.rename(columns={'GC=F': 'Gold',
@@ -136,7 +136,6 @@ com = com.rename(columns={'GC=F': 'Gold',
                           'ZC=F': 'Corn',
                           'SB=F': 'Sugar',
                           'ZO=F': 'Oat',
-                          'ZR=F': 'Rough Rice',
                           'ZS=F': 'Soybean',
                           'LE=F': 'Live Cattle',
                           'HE=F': 'Lean Hogs',
