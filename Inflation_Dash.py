@@ -191,9 +191,8 @@ fig5.update_xaxes(title='')
 # ------------------------------------------------------------ #
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
-                meta_tags=[
-                    {'name': 'viewport',
-                     'content': 'width=device-width, initial-scale=1.0'}]
+                meta_tags=[{'name': 'viewport',
+                            'content': 'width=device-width, initial-scale=1.0'}]
                 )
 
 app.layout = dbc.Container([
@@ -237,7 +236,6 @@ app.layout = dbc.Container([
 
 # ------------------------------------------------------------ #
 
-
 @app.callback(Output('commodity-select', 'figure'),
               Input('drpdwn', 'value'))
 
@@ -250,7 +248,6 @@ def update_plot(commodity_selected):
                    height=700)
     fig2.update_xaxes(title='')
     return fig2
-
 
 if __name__ == "__main__":
     app.run_server(debug=True, port=8800)
