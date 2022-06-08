@@ -269,6 +269,7 @@ app.layout = dbc.Container([
 
 @app.callback(Output('commodity-select', 'figure'),
               Input('drpdwn', 'value'))
+
 def update_plot(commodity_selected):
     com_select = com[com['Symbols'] == commodity_selected]
     fig1 = px.line(com_select,
