@@ -128,7 +128,7 @@ fig2 = px.choropleth(gas,
                      color_continuous_scale='spectral_r',
                      locationmode='USA-states',
                      scope='usa',
-                     title='Current Price of Regular Unleaded Gasoline',
+                     title='Price of Regular Unleaded Gasoline',
                      height=1000)
 
 fig2.add_scattergeo(locations=gas['Abbreviation'],
