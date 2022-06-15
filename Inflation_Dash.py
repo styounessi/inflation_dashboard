@@ -144,19 +144,19 @@ fig2.update_layout(coloraxis_colorbar_title='Price $',
 
 hpi = pdr.DataReader('CSUSHPINSA', 'fred', start, end)
 cpi = pdr.DataReader('CPIAUCSL', 'fred', start, end)
-ppi = pdr.DataReader('PPIACO', 'fred', start, end)
+ppi = pdr.DataReader('PPIFIS', 'fred', start, end)
 pce = pdr.DataReader('PCEPI', 'fred', start, end)
 exp = pdr.DataReader('MICH', 'fred', start, end)
 ppm = pdr.DataReader('STLPPM', 'fred', start, end)
 
 hpi['%'] = hpi['CSUSHPINSA'].pct_change().round(4) * 100
 cpi['%'] = cpi['CPIAUCSL'].pct_change().round(4) * 100
-ppi['%'] = ppi['PPIACO'].pct_change().round(4) * 100
+ppi['%'] = ppi['PPIFIS'].pct_change().round(4) * 100
 pce['%'] = pce['PCEPI'].pct_change().round(4) * 100
 
 hpi = hpi.rename(columns={'CSUSHPINSA': 'Case Shiller Home Price Index'})
 cpi = cpi.rename(columns={'CPIAUCSL': 'Consumer Price Index'})
-ppi = ppi.rename(columns={'PPIACO': 'Producer Price Index'})
+ppi = ppi.rename(columns={'PPIFIS': 'Producer Price Index'})
 pce = pce.rename(columns={'PCEPI': 'Personal Consumption Expenditures'})
 exp = exp.rename(columns={'MICH': 'Univ. of Michigan Inflation Expectations'})
 ppm = ppm.rename(columns={'STLPPM': 'St. Louis Fed Price Pressures Measure'})
