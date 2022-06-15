@@ -55,10 +55,7 @@ table = soup.find_all('table')
 gas = pd.read_html(str(table))[0]
 
 def remove_dollar(sign):
-    try:
-        sign = sign.str.replace('$', '', regex=True)
-    except:
-        pass
+    sign = sign.str.replace('$', '', regex=True)
     return sign
 
 gas = gas.apply(remove_dollar)
