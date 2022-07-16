@@ -114,10 +114,7 @@ abbv = {'Alabama': 'AL',
 
 gas['Abbreviation'] = gas.State.map(abbv)
 
-gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']
-    ] = gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']].astype(float)
-gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']
-    ] = gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']].round(2)
+gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']] = gas[['Regular', 'Mid-Grade', 'Premium', 'Diesel']].astype(float).round(2)
 
 fig2 = px.choropleth(gas,
                      locations='Abbreviation',
