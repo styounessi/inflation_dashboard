@@ -270,5 +270,5 @@ def update_plot(commodity_selected):
     fig1.update_xaxes(title=None)
     return fig1
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run_server(debug=True, port=8080)
