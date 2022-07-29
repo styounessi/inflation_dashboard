@@ -249,9 +249,9 @@ app.layout = dbc.Container([
             dbc.Col(
                 dcc.Graph(id='pce_bar', figure=fig6)),
             dbc.Col(
-                dcc.Graph(id='ppm_bar', figure=fig7)),
+                dcc.Graph(id='ppm_line', figure=fig7)),
             dbc.Col(
-                dcc.Graph(id='exp_bar', figure=fig8))
+                dcc.Graph(id='exp_line', figure=fig8))
             ]),
 
                             ], fluid=True)
