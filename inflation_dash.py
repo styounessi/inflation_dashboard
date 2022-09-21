@@ -254,7 +254,7 @@ app.layout = dbc.Container([
                 dcc.Graph(id='exp_line', figure=fig8))
             ]),
 
-                            ], fluid=True)
+    ], fluid=True)
 
 # ------------------------------------------------------------ #
 
