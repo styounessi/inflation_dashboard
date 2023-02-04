@@ -2,7 +2,7 @@
 A quick, low-code way to get an inflation tracking dashboard up and running with an assortment of data and indicators in one place
 without any extra frills or hindrances. In depth explanation can be found on [Medium](https://medium.com/geekculture/building-an-inflation-tracking-dashboard-with-plotly-dash-93edf01e1fcf).
 
-## Requirements
+## Technologies Used
 You can install any of the required libraries using `pip` like in the example below.
 
 `pip install dash`
