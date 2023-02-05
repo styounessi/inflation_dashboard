@@ -214,22 +214,22 @@ def plot_indicator(dataframe, indicator, title, plot_type='bar'):
     return fig
 
 # Create a plot variable for each indicator DataFrame
-fig3 = plot_indicator(cpi, 'Consumer Price Index', \
+fig3 = plot_indicator(cpi, 'Consumer Price Index',
                       'Consumer Price Index - Monthly % Change')
 
-fig4 = plot_indicator(ppi, 'Producer Price Index', \
+fig4 = plot_indicator(ppi, 'Producer Price Index',
                       'Producer Price Index - Monthly % Change')
 
-fig5 = plot_indicator(hpi, 'Case-Shiller Home Price Index', \
+fig5 = plot_indicator(hpi, 'Case-Shiller Home Price Index',
                       'Case-Shiller Home Price Index - Monthly % Change')
 
-fig6 = plot_indicator(pce, 'Personal Consumption Expenditures', \
+fig6 = plot_indicator(pce, 'Personal Consumption Expenditures',
                       'Personal Consumption Expenditures - Monthly % Change')
 
-fig7 = plot_indicator(ppm, 'St. Louis Fed Price Pressures Measure', \
+fig7 = plot_indicator(ppm, 'St. Louis Fed Price Pressures Measure',
                       'St. Louis Fed Price Pressures Measure', plot_type="line")
                   
-fig8 = plot_indicator(exp, 'Univ. of Michigan Inflation Expectations', \
+fig8 = plot_indicator(exp, 'Univ. of Michigan Inflation Expectations',
                       'Univ. of Michigan Consumer Inflation Expectations', plot_type="line")
 
 #---------------Dash Layout---------------#
