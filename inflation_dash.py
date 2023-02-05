@@ -157,7 +157,7 @@ def fetch_data(fred_code, series_name, start_date, end_date, is_percent=True):
     '''
     Fetches data from the FRED database using a unique FRED code.
     
-    Parameters:
+    Args:
         fred_code (str): The FRED code of the data series to be fetched.
         series_name (str): The name of the series to be used as a column name.
         start_date (str): The start date for the data series in the format 'YYYY-MM-DD'.
@@ -189,7 +189,7 @@ def plot_indicator(dataframe, indicator, title, plot_type='bar'):
     '''
     Plots the data from a dataframe using the specified indicator.
 
-    Parameters:
+    Args:
         dataframe (pandas.DataFrame): The data to plot.
         indicator (str): The column from the dataframe to use as the fred indicator.
         title (str): The title to use for the plot.
@@ -304,7 +304,7 @@ def update_plot(commodity_selected):
     '''
     This function updates the commodity prices plot via the commodity selection dropdown.
 
-    Parameters:
+    Args:
         commodity_selected (str): The name of the selected commodity.
 
     Returns:
