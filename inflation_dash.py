@@ -61,7 +61,6 @@ commodities = commodities.rename(columns={'variable': 'Commodity Name'})
 url = 'https://gasprices.aaa.com/state-gas-price-averages/'
 headers = {'User-Agent': 'Mozilla/5.0'}
 
-# Using pd.read_html() directly without BeautifulSoup is a viable alternative here
 res = requests.get(url, headers=headers)
 soup = BeautifulSoup(res.content, 'lxml')
 table = soup.find_all('table')
