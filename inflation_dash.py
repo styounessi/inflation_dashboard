@@ -153,7 +153,7 @@ fig2.update_layout(coloraxis_colorbar_title='Price $',
 
 #---------------Collect Economic Indicators---------------#
 
-def fetch_data(fred_code, series_name, start_date, end_date, is_percent=True):
+def fetch_fred(fred_code, series_name, start_date, end_date, is_percent=True):
     '''
     Fetches data from the FRED database using a unique FRED code.
     
@@ -176,21 +176,21 @@ def fetch_data(fred_code, series_name, start_date, end_date, is_percent=True):
     return df
 
 # Create each indicator variable
-hpi = fetch_data('CSUSHPINSA', 'Case Shiller Home Price Index', start_date, end_date)
-cpi = fetch_data('CPIAUCSL', 'Consumer Price Index', start_date, end_date)
-ppi = fetch_data('PPIFIS', 'Producer Price Index', start_date, end_date)
-pce = fetch_data('PCE', 'Personal Consumption Expenditures', start_date, end_date)
-exp = fetch_data('MICH', 'Univ. of Michigan Inflation Expectations', start_date, end_date, is_percent=False)
-ppm = fetch_data('STLPPM', 'St. Louis Fed Price Pressures Measure', start_date, end_date, is_percent=False)
+hpi = fetch_fred('CSUSHPINSA', 'Case Shiller Home Price Index', start_date, end_date)
+cpi = fetch_fred('CPIAUCSL', 'Consumer Price Index', start_date, end_date)
+ppi = fetch_fred('PPIFIS', 'Producer Price Index', start_date, end_date)
+pce = fetch_fred('PCE', 'Personal Consumption Expenditures', start_date, end_date)
+exp = fetch_fred('MICH', 'Univ. of Michigan Inflation Expectations', start_date, end_date, is_percent=False)
+ppm = fetch_fred('STLPPM', 'St. Louis Fed Price Pressures Measure', start_date, end_date, is_percent=False)
 
 #---------------Build Indicator Plots---------------#
 
-def plot_indicator(dataframe, indicator, title, plot_type='bar'):
+def plot_indicator(df, indicator, title, plot_type='bar'):
     '''
     Plots the data from a dataframe using the specified indicator.
 
     Args:
-        dataframe (pandas.DataFrame): The data to plot.
+        df (pandas.DataFrame): The data to plot.
         indicator (str): The column from the dataframe to use as the fred indicator.
         title (str): The title to use for the plot.
         plot_type (str, optional): The type of plot to create. Default is 'bar'.
@@ -205,9 +205,9 @@ def plot_indicator(dataframe, indicator, title, plot_type='bar'):
     y = 'Percent' if indicator in percentages else indicator
     
     if plot_type == 'bar':
-        fig = px.bar(dataframe, y=y, color=y, color_continuous_scale='BlueRed', title=title)
+        fig = px.bar(df, y=y, color=y, color_continuous_scale='BlueRed', title=title)
     elif plot_type == 'line':
-        fig = px.line(dataframe, y=y, title=title)
+        fig = px.line(df, y=y, title=title)
     
     fig.update_xaxes(title=None)
     fig.update_yaxes(title=None)
