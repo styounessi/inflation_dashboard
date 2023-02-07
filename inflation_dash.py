@@ -234,7 +234,7 @@ fig8 = plot_indicator(exp, 'Univ. of Michigan Inflation Expectations',
 
 #---------------Dash Layout---------------#
 
-# Initialize Dash app with external stylesheet and meta tag
+# Initialize Dash app with external stylesheet and meta tag(s)
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.FLATLY],
                 meta_tags=[{'name': 'viewport',
                             'content': 'width=device-width, initial-scale=1.0'}]
