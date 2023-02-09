@@ -162,9 +162,9 @@ def fetch_fred(fred_code, series_name, start_date, end_date, is_percent=True):
         series_name (str): The name of the series to be used as a column name.
         start_date (str): The start date for the data series in the format 'YYYY-MM-DD'.
         end_date (str): The end date for the data series in the format 'YYYY-MM-DD'.
-        is_percent (bool, optional): If True, the returned data frame will include a 
-                                     'Percent' column with the percentage change of 
-                                     the data series. Default is True.
+        is_percent (bool, optional): If True, the returned DataFrame will include a 
+                                     'Percent' column with the monthly percentage
+                                     change of the series. Default is True.
     
     Returns:
         pandas.DataFrame: The fetched data with the specified series name and, if is_percent is True, a 'Percent' column.
