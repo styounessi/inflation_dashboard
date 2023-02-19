@@ -170,8 +170,11 @@ def fetch_fred(fred_code, series_name, start_date, end_date, is_percent=True):
         pandas.DataFrame: The fetched data with the specified series name and, if is_percent is True, a 'Percent' column.
     '''
     df = pdr.DataReader(fred_code, 'fred', start_date, end_date)
+   
+    # Calculate month-over-month percentage change of series
     if is_percent:
         df['Percent'] = df[fred_code].pct_change().round(4) * 100
+    
     df = df.rename(columns={fred_code: series_name})
     return df
 
