@@ -14,6 +14,7 @@ You can install any of the required libraries using `pip` like in the example be
  - [Pandas Datareader](https://pypi.org/project/pandas-datareader/)
  - [Plotly](https://pypi.org/project/plotly/)
  - [Requests](https://pypi.org/project/requests/)
+ - [Yfinance] (https://pypi.org/project/yfinance/)
 
 ## Additional Information
 Economic data is available on FRED, [Federal Reserve Economic Data](https://fredhelp.stlouisfed.org/fred/about/about-fred/what-is-fred/),
