@@ -230,10 +230,10 @@ fig6 = plot_indicator(pce, 'Personal Consumption Expenditures',
                       'Personal Consumption Expenditures - Monthly % Change')
 
 fig7 = plot_indicator(ppm, 'St. Louis Fed Price Pressures Measure',
-                      'St. Louis Fed Price Pressures Measure', plot_type="line")
+                      'St. Louis Fed Price Pressures Measure', plot_type='line')
                   
 fig8 = plot_indicator(exp, 'Univ. of Michigan Inflation Expectations',
-                      'Univ. of Michigan Consumer Inflation Expectations', plot_type="line")
+                      'Univ. of Michigan Consumer Inflation Expectations', plot_type='line')
 
 #---------------Dash Layout---------------#
 
